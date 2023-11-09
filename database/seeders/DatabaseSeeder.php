@@ -26,19 +26,8 @@ class DatabaseSeeder extends Seeder
         ]);
         if (\App\Models\User::count()==0){
             $user = User::create([
-                'name' => 'Nishad',
-                'email' => 'nishad@test.com',
-                'password'=>bcrypt('A12345678#'),
-                'email_verified_at'=>now()
-            ]);
-            $user->wallets()->create([
-                'user_id'=>$user->id,
-                'wallet_type_id'=>WalletType::SAVINGS,
-                'wallet_status_id'=>WalletStatus::ACTIVE,
-            ]);
-            $user = User::create([
                 'name' => 'Test',
-                'email' => 'test@test.com',
+                'email' => 'test@example.com',
                 'password'=>bcrypt('A12345678#'),
                 'email_verified_at'=>now()
             ]);
